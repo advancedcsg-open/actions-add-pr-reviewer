@@ -6292,7 +6292,7 @@ function main () {
     const context = github.context
 
     if (context.payload.pull_request == null) {
-      core.setFailed('No pull request found.')
+      core.setFailed('No current pull request identified.')
       return
     }
 

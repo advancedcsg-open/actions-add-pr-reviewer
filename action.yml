@@ -1,0 +1,14 @@
+name: "Add PR Reviewers (Advanced)"
+description: "Adds reviewer(s) to a pull request"
+branding:
+  icon: "bar-chart"
+  color: "green"
+inputs:
+  reviewers:
+    description: "Reviewer(s) to add, in comma separated list."
+    required: true
+  remove:
+    description: "Remove a review request (defaults to false)"
+runs:
+  using: "node14"
+  main: "dist/index.js"

@@ -1,0 +1,21 @@
+name: "unit-test"
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  # test action works running from the graph
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test adding reviewer
+        uses: ./
+        with:
+          reviewers: hobbit_71
+      - name: Test removing reviewer
+        uses: ./
+        with:
+          reviewers: hobbit_71
+          remove: true
